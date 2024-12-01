@@ -44,9 +44,6 @@ pub fn day2() !void {
         index += 1;
     }
 
-    std.mem.sort(usize, &array1, {}, comptime std.sort.asc(usize));
-    std.mem.sort(usize, &array2, {}, comptime std.sort.asc(usize));
-
     var counter: usize = 0;
 
     for (array1) |elem1| {
