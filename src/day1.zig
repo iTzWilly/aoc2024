@@ -1,13 +1,13 @@
-const input = @embedFile("data/day1_data.txt");
+const input = @embedFile("data/day1.txt");
 const std = @import("std");
 const print = @import("std").debug.print;
 
 pub fn main() !void {
-    try day1();
-    try day2();
+    try part1();
+    try part2();
 }
 
-pub fn day1() !void {
+fn part1() !void {
     var it = std.mem.tokenizeScalar(u8, input, '\n');
     var array1: [1000]i32 = undefined;
     var array2: [1000]i32 = undefined;
@@ -30,7 +30,7 @@ pub fn day1() !void {
     print("Ergebnis Teil 1: {d}\n", .{counter});
 }
 
-pub fn day2() !void {
+fn part2() !void {
     var it = std.mem.tokenizeScalar(u8, input, '\n');
     var array1: [1000]usize = undefined;
     var array2: [1000]usize = undefined;
